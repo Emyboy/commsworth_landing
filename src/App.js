@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import AboutUs from './components/AboutUs';
+import Header from './components/Header';
+import Jumbo from './components/Jumbo';
+import OurStory from './components/OurStory';
+import Servicies from './components/Servicies';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Jumbo />
+      <div className='gray mb-5'>
+        <div className='container'>
+          <AboutUs />
+          <OurStory />
+        </div>
+      </div>
+      <div className='container'>
+        <Servicies />
+      </div>
     </div>
   );
 }

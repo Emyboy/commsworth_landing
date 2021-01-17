@@ -1,38 +1,177 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: SourceSansPro;
+  src: url(./assets/fonts/SansPro/SourceSansPro-Regular.ttf);
+}
+@font-face {
+  font-family: Raleway;
+  src: url(./assets/fonts/Raleway/static/Raleway-Regular.ttf);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --primary-color: #4CB952;
+  --secondery-color: #3546AC;
+  --primary-font: 'SourceSansPro';
+  --secondery-font: 'Raleway'
+}
+*{
+    font-family: var(--secondery-font);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--primary-font) !important;
+}
+p{
+    font-size: 20px;
+    /* font-weight: 800; */
+    line-height: 36.32px;
+}
+.carousel-indicators  li {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 17px;
+    height: 15px;
+    border-radius: 100%;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    background-clip: padding-box;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: .5;
+    transition: opacity .6s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+/* -------------------------- */
+.navbar {
+    /* position: absolute; */
+    width: 100%;
+    z-index: 100;
+    background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,0.7091211484593838) 0%, rgba(0,0,0,0.3169642857142857) 61%, rgba(0,0,0,0) 100%);
+
+}
+.nav-link{
+    color: white !important;
+    font-family: var(--primary-font) !important;
+    font-size: 20px;
+    /* font-weight: 600 !important; */
+}
+.nav-link:hover{
+    color: var(--primary-color) !important;
 }
 
-.App-link {
-  color: #61dafb;
+
+button {
+    background: var(--primary-color);
+    font-family: var(--primary-font) !important;
+    font-size: 15px;
+}
+button svg {
+    margin-left: 12px;
+    margin-bottom: 4px;
+    font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.carousel-caption{
+    position: absolute;
+}
+
+.jumbo-overlay{
+    position: absolute;
+    z-index: 230;
+    width: 100%;
+    top: 121px;
+}
+.jumbo-overlay, h2 p{
+    color: white;
+}
+.link{
+    color: var(--primary-color) !important;
+    text-decoration: underline !important;
+    font-family: var(--secondery-font) !important;
+    font-weight: bold;
+}
+.link svg {
+    margin-left: 10px;
+    margin-bottom: 4px;
+    font-size: 20px;
+}
+
+.title-text {
+    color: var(--secondery-color);
+    font-weight: bold !important;
+    content: "—";
+}
+.title div {
+      content: "";
+    display: block;
+    border: 2px solid var(--secondery-color);
+    width: 21%;
+    height: 0;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.story img:first-child{
+    border-top-left-radius: 50px;
+    box-shadow: -14px 37px 105px -47px rgba(0,0,0,0.75);
+-webkit-box-shadow: -14px 37px 105px -47px rgba(0,0,0,0.75);
+-moz-box-shadow: -14px 37px 105px -47px rgba(0,0,0,0.75);
+}
+.story p {
+    line-height: 36.32px;
+    font-size: 20px !important;
+    /* font-weight: 800; */
+}
+.sub-story img:first-child{
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 50px;
+    position: absolute;
+    right: 16px;
+    top: 9px
+}
+.sub-story p {
+    /* font-weight: 800; */
+    line-height: 36.32px;
+    font-size: 20px !important;
+}
+.gray {
+    background: #F8F8F8 !important;
+}
+
+.card {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.card-body{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: var(--secondery-color);
+    color: white;
+    font-size: 18px;
+}
+.card-body .card-title {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 32.78px;
+}
+.card-body .card-text{
+    font-size: 18px;
+}
+
+.img-hover-zoom {
+  height: 300px; 
+  overflow: hidden; 
+}
+
+
+.img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+.img-hover-zoom:hover img {
+  transform: scale(1.2);
 }
