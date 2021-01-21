@@ -1,9 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import AboutUs from './components/AboutUs';
+import Blog from './components/Blog';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import Jumbo from './components/Jumbo';
 import OurStory from './components/OurStory';
+import Partners from './components/Partners';
+import Projects from './components/Projects';
 import Servicies from './components/Servicies';
 
 function App() {
@@ -20,6 +24,14 @@ function App() {
       <div className='container'>
         <Servicies />
       </div>
+      <Projects />
+      <div className='gray'>
+        <Partners />
+      </div>
+      <div className='container'>
+        <Blog />
+      </div>
+      <Footer />
     </div>
   );
 }
